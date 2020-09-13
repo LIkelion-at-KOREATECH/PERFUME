@@ -1,11 +1,47 @@
-body {
-    margin: 0;
+* {
+    box-sizing: border-box;
     background-color: #934BF1;
 }
 
-input[type="submit"] {
+body {
+    margin: 0;
+}
+
+/* 선택 - 작성 or 검색 */
+.list {
+    display: table;
+    table-layout: fixed;
+}
+
+.choice {
+    display: table-cell;
+    /* vertical-align: middle; */
+    /* 가운데 정렬 - 넓이 반드시 지정 */
+    width: 1160px;
+    margin: 0 auto;
+}
+
+h1,
+h3,
+div {
+    background-color: #934BF1;
+    margin-bottom: 0;
+    color: white;
+    text-align: center;
+}
+
+/* 뒤로가기 */
+button {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
     color: white;
     background-color: #934BF1;
     border: none;
+    margin: 4px 2px;
     font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }

@@ -21,7 +21,7 @@ body {
 .choice {
     display: table-cell;
     /* 가운데 정렬 - 넓이 반드시 지정 */
-    vertical-align: middle;
+    vertical-align: top;
     height: 400px;
     width: 1100px;
     margin: 0 auto;
@@ -30,15 +30,13 @@ body {
 h1,
 h3,
 div {
-    background-color: #934BF1;
+    background-color: #e0d7eb;
     color: white;
-    text-align: center;
 }
 
-h1 {
+.either {
     display: inline-block;
 }
-
 
 a {
     text-decoration: none;

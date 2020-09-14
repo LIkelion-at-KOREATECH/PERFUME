@@ -7,32 +7,41 @@
     <title>게시글 작성 또는 검색</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/choose3.css' %}">
+    <!-- 구글폰트 적용 (fonts.google.com)-->
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Playball&display=swap" rel="stylesheet">
+    <!-- 괜찮은 글꼴 리스트 : great vibes / cookie / parisienne / Italianno / Niconne / Suranna / Playball / Charm / Petit Formal Script -->
+    <style>
+        #logo {
+            font-family: 'Italianno', cursive;
+            font-size: 50px;
+            font-weight: normal;
+        }
+    </style>
 </head>
 
 <body>
-
-
+    <div class="title">
+        <h1 id="logo">perfume</h1>
+    </div>
     <div id="list">
-        <div class="title">
-            <h1>perfume</h1>
-        </div>
         <div class="choice sub1">
             <a href="">
-                <h1>게시글 작성</h1>
+                <h1 class="either">게시글 작성</h1>
             </a>
             <h3>정보를 공유하고 싶다면?</h3>
         </div>
         <div class="choice sub2">
             <a href="">
-                <h1>게시글 검색</h1>
+                <h1 class="either">게시글 검색</h1>
             </a>
             <h3>정보를 얻고 싶다면?</h3>
         </div>
     </div>
+</body>
+<footer>
     <div>
         <button type="submit" class="btn_box">뒤로가기</button>
     </div>
-
-</body>
+</footer>
 
 </html>

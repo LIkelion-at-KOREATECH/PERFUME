@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume_chooser</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        div{text-align:center;}
+    </style>
+
+</head>
+<body>
+    <div class = "title">
+        Perfume
+    </div>
+    
+    <div class= "subtitle">
+        어디로 놀러가시나요?
+    </div>
+   
+        <div class ="choose_circle">
+            <img src ="{% static 'css/img/choose_circle.PNG'%}" > 
+            <img src ="{% static 'css/img/choose_circle.PNG'%}" >
+            <img src ="{% static 'css/img/choose_circle.PNG'%}" >
+            <p class="region">서울 인천 천안</p>
+        </div>
+        
+        <div class ="choose_circle2">
+            <img src ="{% static 'css/img/choose_circle.PNG'%}" >
+            <img src ="{% static 'css/img/choose_circle.PNG'%}" >
+            <img src ="{% static 'css/img/choose_circle.PNG'%}" >
+            <p class="region2">대전 부산 제주도</p>       
+        </div>
+</body>
+</html>

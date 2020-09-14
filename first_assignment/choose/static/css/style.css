@@ -1,0 +1,43 @@
+.title{
+    color:  #934BF1;
+    font-family:Georgia;
+    font-size:500%;
+    text-align : center;
+    margin-top: 140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.subtitle{
+    color:#AB9CBE;
+    font-family: Bold;
+    font-size:130%;
+    text-align : center;
+    margin-top: 35px;
+    margin-bottom:auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+.choose_circle{
+    width:300px;
+    margin-top : 50px;
+    margin-bottom:auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+.choose_circle2{
+    margin-top : 30px;
+    margin-bottom:auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.region{
+    color:#A087C2;
+   word-spacing:55px; 
+}
+
+.region2{
+    color: #A087C2;
+    word-spacing:55px; 
+ }

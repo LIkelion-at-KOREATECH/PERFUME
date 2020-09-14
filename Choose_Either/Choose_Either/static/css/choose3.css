@@ -50,6 +50,11 @@ h3 {
     font-size: 22px;
 }
 
+a:hover,
+.either:hover {
+    color: black;
+}
+
 /* 게시글 작성, 게시글 검색 */
 .either {
     display: inline-block;
@@ -59,25 +64,26 @@ h3 {
 
 a {
     text-decoration: none;
+    padding: 60px 60px 120px 60px;
+    border-radius: 15px;
+    box-sizing: border-box;
 }
 
+
 /* 뒤로가기 */
-button {
+.back-btn {
     position: fixed;
     left: 50px;
     bottom: 40px;
-    color: white;
-    border: none;
+    color: #f1dbfa;
     font-size: 25px;
-    text-decoration: none;
-    /* cursor: pointer; */
     /* 두께 400, 700, 800 사용가능*/
     font-weight: 400;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 20px;
+    padding: 10px;
 }
 
 .fas {
     margin-right: 10px;
-    color: white;
 }

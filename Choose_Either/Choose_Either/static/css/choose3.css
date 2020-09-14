@@ -14,7 +14,7 @@ body {
 
 #logo {
     font-family: 'Italianno', cursive;
-    font-size: 50px;
+    font-size: 80px;
     font-weight: normal;
     margin: 0;
 }
@@ -33,19 +33,28 @@ body {
     height: 400px;
     width: 1100px;
     margin: 0 auto;
+    /* 두께 400, 700, 800 사용가능*/
+    font-weight: 400;
+    font-family: 'Nanum Gothic', sans-serif;
 }
+
 
 h1,
 h3,
 div {
     color: white;
     text-align: center;
+}
 
+h3 {
+    font-size: 22px;
 }
 
 /* 게시글 작성, 게시글 검색 */
 .either {
     display: inline-block;
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 a {
@@ -62,6 +71,10 @@ button {
     font-size: 25px;
     text-decoration: none;
     /* cursor: pointer; */
+    /* 두께 400, 700, 800 사용가능*/
+    font-weight: 400;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
 }
 
 .fas {

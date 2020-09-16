@@ -5,6 +5,10 @@
 <script>
   alert('로그인 성공하셨습니다.');
 </script>
+<a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+<form action ="{% url 'logout' %}" method="POST" id="logout">
+{% csrf_token %} <input type="hidden">
+</form>
 {{ user.username }}님 환영합니다.
 {% else %}
 <html>

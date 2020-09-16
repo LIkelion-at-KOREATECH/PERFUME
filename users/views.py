@@ -1,7 +1,7 @@
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
 from .models import User
-
+from django.contrib import auth
 
 #Create your views here.
 
@@ -20,7 +20,7 @@ def signup_view(request):
         user.re_password = re_password
         user.save()
 
-        return render(request, "users/login.html")
+        return redirect("/")
 
     return render(request, "users/signup.html")
 
@@ -44,3 +44,8 @@ def introduce_view(request):
 def policy_view(request):
     
     return render(request, "users/policy.html")
+
+def logout(request):
+    if request.method == "POST" :
+        auth.logout(request)
+        return render(request, "users/login.html")

@@ -20,11 +20,13 @@ from users.views import login_view
 from users.views import signup_view
 from users.views import introduce_view
 from users.views import policy_view
+from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls, name="admin"),
-    path("", login_view, name="login"),
-    path("signup", signup_view, name="signup"),
-    path("introduce", introduce_view, name="introduce"),
-    path("policy", policy_view, name="policy"),
+    path('', login_view, name="login"),
+    path('signup/', signup_view, name="signup"),
+    path('introduce/', introduce_view, name="introduce"),
+    path('policy/', policy_view, name="policy"),
+    path('logout/', views.logout, name="logout"),
 ]

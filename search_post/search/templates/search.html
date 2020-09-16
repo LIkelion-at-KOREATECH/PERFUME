@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 검색</title>
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+</head>
+
+<body>
+    <nav class="nav-container">
+        <div class="nav-div1">
+            <span class="nav-title">Perfume</span>
+        </div>
+
+        <div class="nav-div2">
+            <img class="nav-item" src="{% static 'images/sharp_search_white_18dp.png' %}">
+            <img class="nav-item" src="{% static 'images/sharp_mail_outline_white_18dp.png' %}">
+            <img class="nav-item" src="{% static 'images/baseline_person_white_18dp.png' %}">
+            <span class="nav-item">게시글 작성</span>
+            <img class="nav-item" src="{% static 'images/sharp_subject_white_18dp.png' %}">
+        </div>
+    </nav>
+</body>
+
+</html>

@@ -1,4 +1,5 @@
-/* 색깔 - #756AA6ac, #934BF1 */
+/* 사용한 색깔 - #934BF1, #756AA6ac, #d1bbe6 */
+/* 글꼴 - 영문은 Georgia, 한글은 Bold */
 
 body {
     margin: 0;
@@ -83,13 +84,13 @@ img {
 .profile {
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 5px;
 }
 
 .profile-item {
     display: inline-block;
-    padding-left: 150px;
+    padding-left: 80px;
     padding-right: 0;
     padding-top: 5px;
     margin-right: 10px;
@@ -101,4 +102,35 @@ img {
     display: inline-block;
     font-size: 1.2rem;
     color: #756AA6ac;
+}
+
+/* 카테고리 선택 (반응형 요소 사용) */
+.category {
+    border: 5px solid #d1bbe6;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 50%;
+    height: 80%;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cate-item {
+    color: #d1bbe6;
+    font-family: Bold;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#l {
+    color: #d1bbe6;
+    font-weight: bold;
+    display: inline;
 }

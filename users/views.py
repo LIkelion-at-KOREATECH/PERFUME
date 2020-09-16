@@ -9,14 +9,13 @@ def signup_view(request):
 
     if request.method == "POST":
         print(request.POST)
-        username = request.POST.get('username')
-        email = request.POST["email"]
+        username = request.POST.get('email')
+        email = request.POST.get('username')
         password = request.POST["password"]
         re_password = request.POST.get('re_password')
         birth = request.POST.get('birth')
 
-        user = User.objects.create_user(email, password)
-        user.username = username
+        user = User.objects.create_user(username, email, password)
         user.birth = birth
         user.re_password = re_password
         user.save()
@@ -27,9 +26,9 @@ def signup_view(request):
 
 def login_view(request):
      if request.method == "POST":
-         email = request.POST["email"]
+         username = request.POST.get('username')
          password = request.POST["password"]
-         user = authenticate(email=email, password=password)
+         user = authenticate(username=username, password=password)
          if user is not None:
              print("인증 성공")
              login(request, user)

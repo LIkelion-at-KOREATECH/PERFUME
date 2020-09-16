@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Choose3.apps.Choose3Config',
+    'post.apps.PostConfig',
 ]
 
 MIDDLEWARE = [

@@ -12,7 +12,7 @@ body {
 /* 로고 */
 .title {
     margin: 90px 0 0 0;
-    font-family: Georgia, cursive;
+    font-family: 'Italianno', cursive;
     font-size: 80px;
     font-weight: normal;
     text-align: center;
@@ -39,7 +39,7 @@ body {
 a {
     text-decoration: none;
     color: white;
-    font-family: Bold, sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     font-weight: 800;
 }
 
@@ -62,7 +62,7 @@ p {
     font-size: 25px;
     /* 두께 400, 700, 800 사용가능*/
     font-weight: 400;
-    font-family: Bold, sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 20px;
     padding: 0;
 }

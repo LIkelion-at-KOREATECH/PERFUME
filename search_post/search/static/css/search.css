@@ -147,11 +147,6 @@ a {
     font-family: Bold;
 }
 
-/* .posting-lo {
-    width: 20px;
-    vertical-align: center;
-}*/
-
 .fa-map-marker-alt {
     color: #8b5eb4ac;
     margin-right: 5px;
@@ -166,6 +161,7 @@ a {
 table {
     color: #934BF1;
     background-color: #fff9d4e0;
+    margin-bottom: 10px;
 }
 
 td {
@@ -174,7 +170,7 @@ td {
 }
 
 .search-image {
-    max-width: 300px;
+    max-width: 200px;
     margin-right: 5px;
 }
 
@@ -186,4 +182,9 @@ td {
 .search-content {
     color: #d1bbe6;
     display: table-cell;
+}
+
+/* 게시글 */
+.search-image {
+    width: 200px;
 }

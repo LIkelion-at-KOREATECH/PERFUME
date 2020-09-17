@@ -1,4 +1,5 @@
-/* 색깔 - #756AA6ac, #934BF1 */
+/* 사용한 색깔 - #934BF1, #756AA6ac, #d1bbe6, #fff9d4e0 */
+/* 글꼴 - 영문은 Georgia, 한글은 Bold */
 
 body {
     margin: 0;
@@ -83,13 +84,13 @@ img {
 .profile {
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 5px;
 }
 
 .profile-item {
     display: inline-block;
-    padding-left: 150px;
+    padding-left: 80px;
     padding-right: 0;
     padding-top: 5px;
     margin-right: 10px;
@@ -101,4 +102,89 @@ img {
     display: inline-block;
     font-size: 1.2rem;
     color: #756AA6ac;
+}
+
+/* 카테고리 선택 (반응형 요소 사용) */
+.category {
+    border: 5px solid #d1bbe6;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 50%;
+    height: 80%;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cate-item {
+    color: #d1bbe6;
+    font-family: Bold;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#l {
+    color: #d1bbe6;
+    font-weight: bold;
+    display: inline;
+}
+
+/* 게시글 */
+.post-series {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 10%;
+    display: table;
+    position: relative;
+    width: 30%;
+    font-weight: bold;
+    font-family: Bold;
+}
+
+.fa-map-marker-alt {
+    color: #8b5eb4ac;
+    margin-right: 5px;
+}
+
+.lo-name {
+    vertical-align: top;
+    color: #8b5eb4ac;
+}
+
+
+table {
+    color: #934BF1;
+    background-color: #fff9d4e0;
+    margin-bottom: 10px;
+}
+
+td {
+    padding-bottom: 5px;
+
+}
+
+.search-image {
+    max-width: 200px;
+    margin-right: 5px;
+}
+
+.posting-user {
+    width: 20px;
+    height: 20px;
+}
+
+.search-content {
+    color: #d1bbe6;
+    display: table-cell;
+}
+
+/* 게시글 */
+.search-image {
+    width: 200px;
 }

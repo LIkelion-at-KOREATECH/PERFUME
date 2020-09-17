@@ -19,24 +19,24 @@
             <span class="nav-title">Perfume</span>
         </div>
         <div class="nav-div2">
-            <img class="nav-item" alt="검색" src="{% static 'images/sharp_search_white_18dp.png' %}">
-            <img class="nav-item" alt="메세지함" src="{% static 'images/sharp_mail_outline_white_18dp.png' %}">
-            <img class="nav-item" alt="내 프로필" src="{% static 'images/baseline_person_white_18dp.png' %}">
+            <img class="nav-item" alt="검색" src="{% static 'img/sharp_search_white_18dp.png' %}">
+            <img class="nav-item" alt="메세지함" src="{% static 'img/sharp_mail_outline_white_18dp.png' %}">
+            <img class="nav-item" alt="내 프로필" src="{% static 'img/baseline_person_white_18dp.png' %}">
             <span class="nav-item">게시글 작성</span>
-            <img class="nav-item" src="{% static 'images/sharp_subject_white_18dp.png' %}">
+            <img class="nav-item" src="{% static 'img/sharp_subject_white_18dp.png' %}">
         </div>
     </nav>
 
     <!-- 사용자가 선택한 옵션 - 지역, 분위기 -->
     <div class="choose">
         <span class="local">천안시, 두정동, 조용한</span>
-        <img class="lo-info-item" alt="위치 on/off" src="{% static 'images/location_onoff_18dp.png' %}">
+        <img class="lo-info-item" alt="위치 on/off" src="{% static 'img/location_onoff_18dp.png' %}">
         <span class="lo-info">위치정보</span>
     </div>
 
     <!-- 사용자 프로필 -->
     <div class="profile">
-        <img class="profile-item" alt="내 프로필 사진" src="{% static 'images/baseline_person_purple&pink.png' %}">
+        <img class="profile-item" alt="내 프로필 사진" src="{% static 'img/baseline_person_purple&pink.png' %}">
         <h3 class="profile-name">김원석</h3>
     </div>
 
@@ -52,31 +52,33 @@
     </div>
 
     <!-- 게시글 -->
-    {% for post in posts.all %}
+
     <secion class="post-series">
+        {% for blog in blogs.all %}
         <table>
             <i class="fas fa-2x fa-map-marker-alt"></i>
-            <span class="lo-name">{{ post.address }}</span>
+            <span class="lo-name">{{ blog.address }}</span>
             <!-- <img class="posting-lo" alt="게시글 위치" src="{% static 'images/locator.png' %}"> -->
             <tr class="se-row">
-                <td rowspan="5"><img class="search-image" alt="이미지" src="{{ post.image.url }}"></td>
+                <td rowspan="5"><img class="search-image" alt="이미지" src="{{ blog.image.url }}"></td>
                 <!-- {% static 'images/baseline_person_purple.png' %} -->
-                <td><img class="posting-user" alt="게시글 작성자" src="{% static 'images/baseline_person_purple.png' %}">
+                <td><img class="posting-user" alt="게시글 작성자" src="{% static 'img/baseline_person_purple.png' %}">
                     <span class="search-visitor">42명의 사람들이 방문했습니다.</span></td>
             </tr>
             <tr>
-                <td><i class="fas fa-clock"> 약 6시간 전</i>
-                    <p class="search-content">{{ post.description }}</p>
+                <td><i class="fas fa-clock"> {{ blog.pub_date}}</i>
+                    <p class="search-content">{{ blog.body }}</p>
                 </td>
             </tr>
             <tr>
                 <td><i class="fas fa-clock"> 약 3시간 전</i>
-                    <p class="search-content">{{ post.description }}</p>
+                    <p class="search-content">{{ blog.body }}</p>
                 </td>
             </tr>
         </table>
+        {% endfor %}
     </secion>
-    {% endfor %}
+
 </body>
 
 </html>

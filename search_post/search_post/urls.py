@@ -9,5 +9,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('search/', search.views.search, name='search'),
-    path('detail/', search.views.detail, name='detail'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

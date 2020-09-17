@@ -1,4 +1,4 @@
-/* 사용한 색깔 - #934BF1, #756AA6ac, #d1bbe6 */
+/* 사용한 색깔 - #934BF1, #756AA6ac, #d1bbe6, #fff9d4e0 */
 /* 글꼴 - 영문은 Georgia, 한글은 Bold */
 
 body {
@@ -133,4 +133,57 @@ a {
     color: #d1bbe6;
     font-weight: bold;
     display: inline;
+}
+
+/* 게시글 */
+.post-series {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 10%;
+    display: table;
+    position: relative;
+    width: 30%;
+    font-weight: bold;
+    font-family: Bold;
+}
+
+/* .posting-lo {
+    width: 20px;
+    vertical-align: center;
+}*/
+
+.fa-map-marker-alt {
+    color: #8b5eb4ac;
+    margin-right: 5px;
+}
+
+.lo-name {
+    vertical-align: top;
+    color: #8b5eb4ac;
+}
+
+
+table {
+    color: #934BF1;
+    background-color: #fff9d4e0;
+}
+
+td {
+    padding-bottom: 5px;
+
+}
+
+.search-image {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.posting-user {
+    width: 20px;
+    height: 20px;
+}
+
+.search-content {
+    color: #d1bbe6;
+    display: table-cell;
 }

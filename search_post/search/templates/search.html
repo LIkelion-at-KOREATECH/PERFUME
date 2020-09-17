@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시글 검색</title>
     <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <!-- FontAwesome 아이콘 적용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 
 <body>
@@ -48,8 +50,44 @@
         <a class="cate-item" href="">관광지</a>
         <a class="cate-item" href="">기타</a>
     </div>
-    <!-- <img class="post-locator" alt="포스팅 지도 확인" src="{% static 'images/locator.png' %}"> -->
 
+    <!-- 게시글 -->
+    <secion class="post-series">
+        <table>
+            <i class="fas fa-2x fa-map-marker-alt"></i>
+            <span class="lo-name">내가보쌈</span>
+            <!-- <img class="posting-lo" alt="게시글 위치" src="{% static 'images/locator.png' %}"> -->
+            <tr class="se-row">
+                <td rowspan="5"><img class="search-image" alt="이미지"
+                        src="{% static 'images/baseline_person_purple.png' %}"></td>
+                <td><img class="posting-user" alt="게시글 작성자" src="{% static 'images/baseline_person_purple.png' %}">
+                    <span class="search-visitor">42명의 사람들이 방문했습니다.</span></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-clock"> 약 6시간 전</i>
+                    <p class="search-content">터미널에서 버스 기다리다가 시간도 때울 겸 해서 들어왔는데 너무 맛있...</p>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-clock"> 약 3시간 전</i>
+                    <p class="search-content">친구랑 점심먹으로 들렸어요.</p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- <div class="post-container">
+
+            <img class="search-image" alt="이미지" src="{% static 'images/baseline_person_purple.png' %}">
+
+            <img class=" posting-user" alt="게시글 작성자" src="{% static 'images/baseline_person_purple.png' %}">
+            <span class="visitor">42명의 사람들이 방문했습니다.</span>
+            <i class="fas fa-clock">약 6시간 전</i>
+            <span class="search-content">터미널에서 버스 기다리다가 시간도 때울 겸 해서 들어왔는데 너무 맛있...</span>
+            <i class="fas fa-clock">약 3시간 전</i>
+            <span class="search-content">친구랑 점심먹으로 들렸어요.</span>
+
+        </div> -->
+    </secion>
 </body>
 
 </html>

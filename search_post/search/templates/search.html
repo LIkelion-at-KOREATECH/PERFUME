@@ -55,31 +55,33 @@
 
     <secion class="post-series">
         {% for blog in blogs.all %}
+
         {% if blog.image %}
         <table>
             <i class="fas fa-2x fa-map-marker-alt"></i>
             <span class="lo-name">{{ blog.address }}</span>
-            <!-- <img class="posting-lo" alt="게시글 위치" src="{% static 'images/locator.png' %}"> -->
+
             <tr class="se-row">
                 <td rowspan="5"><img class="search-image" alt="이미지" src="{{ blog.image.url }}"></td>
-                <!-- {% static 'images/baseline_person_purple.png' %} -->
+            </tr>
+
+            <tr>
                 <td><img class="posting-user" alt="게시글 작성자" src="{% static 'img/baseline_person_purple.png' %}">
                     <span class="search-visitor"><u>42명</u>의 사람들이 방문했습니다.</span></td>
             </tr>
+
             <tr>
                 <td><i class="fas fa-clock"> {{ blog.pub_date}}</i>
                     <p class="search-content">{{ blog.body }}</p>
                 </td>
             </tr>
-            <tr>
-                <td><i class="fas fa-clock"> 약 3시간 전</i>
-                    <p class="search-content">{{ blog.body }}</p>
-                </td>
-            </tr>
+
         </table>
+
         {% else %}
         <h3 style="text-align:center">검색 결과가 없습니다.</h3>
         {% endif %}
+
         {% endfor %}
     </secion>
 

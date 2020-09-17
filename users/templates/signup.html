@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <a id="logo" href="{% url 'home' %}" style="text-decoration : none;">
+        <h1 id="title"><em>perfume</em></h1>
+    </a>
+    <h6 id="sub">Leave perfume where you're staying</h6>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="input-element">
+            <div style="text-align:center; color:#934BF1; margin:0; font-weight:700;"> <!--경고창-->
+                {{error}}
+            </div>
+            <div>
+                <!--이름 입력창-->
+                <label style="color:#934BF1; font-weight:700;">EMAIL</label><br>
+                <input type="email" name="email" placeholder="이메일을 입력하세요." id="email" required>
+            </div>
+            <div>
+                <!--ID입력창-->
+                <label style="color:#934BF1; font-weight:700;">이름</label><br>
+                <input type="text" name="name" placeholder="이름을 입력하세요." id="name" required>
+            </div>
+            <div>
+                <!--PASSWORD입력창-->
+                <label style="color:#934BF1; font-weight:700;">PASSWORD</label><br>
+                <input type="password" name="password" placeholder="비밀번호를 입력하세요." id="password" required>
+            </div>
+            <div>
+                <label for="re_password" style="color:#934BF1; font-weight:700;">Comfirm PASSWORD </label><br>
+                <input type= "password" id="re_password" placeholder="비밀번호 확인" name = "re_password" required>
+            </div>
+            <div>
+                <!--생년월일 입력창-->
+                <label style="color:#934BF1; font-weight:700;">생년월일을 입력해주세요</label><br>
+                <input type="text" name="birth" placeholder="YYYY/MM/DD" id="birth" maxlength="8" required>
+            </div>
+        
+           <div>
+               <!--reCHAPTCHA-->
+               <input type="checkbox" name="robot" value="check">나는 로봇이 아닙니다.
+           </div>
+           <!--회원가입 버튼-->
+           <button type="submit" id="submit-btn">회원가입</button>
+        </div>
+    </form>
+    <footer class="footer">
+        <p id="introduce">perfume은 맞춤형 여행정보 제공 및 공유 서비스입니다.</p><a href="{% url 'introduce' %}">더 알아보기</a>
+        <a href="{% url 'policy' %}" id="terms" style="font-weight:400;">이용약관</a>
+    </footer>
+</body>
+</html>

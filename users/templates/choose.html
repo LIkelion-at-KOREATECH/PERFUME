@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume_chooser</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        div{text-align:center;}
+    </style>
+    <style type="text/css"> 
+        a { text-decoration:none } 
+    </style> 
+
+</head>
+<body>
+    <div class = "title">
+        Perfume
+    </div>
+    {% if user.is_authenticated %}
+
+    <a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+    <form action ="{% url 'logout' %}" method="POST" id="logout">
+    {% csrf_token %} <input type="hidden">
+    </form>
+    {{ user.name }}님 환영합니다.
+    {% endif %}
+    <div class= "subtitle">
+        어디로 놀러가시나요?
+    </div>
+   
+        <div class ="choose_circle">
+            <a href="{% url 'choose_atm' %}"><img src ="{% static 'image/choose_circle.PNG'%}" > </a>
+            <a href="{% url 'choose_atm' %}"><img src ="{% static 'image/choose_circle.PNG'%}" > </a>
+            <a href="{% url 'choose_atm' %}"><img src ="{% static 'image/choose_circle.PNG'%}" > </a>
+            <p class="region"><a href="{% url 'choose_atm' %}">서울</a><a href="{% url 'choose_atm' %}"> 인천 </a> <a href="{% url 'choose_atm' %}">천안</a></p>
+        </div>
+        
+        <div class ="choose_circle2">
+            <a href="{% url 'choose_atm' %}"><img src ="{% static 'image/choose_circle.PNG'%}" > </a>
+            <a href="{% url 'choose_atm' %}"><img src ="{% static 'image/choose_circle.PNG'%}" > </a>
+            <a href="{% url 'choose_atm' %}"><img src ="{% static 'image/choose_circle.PNG'%}" > </a>
+            <p class="region"><a href="{% url 'choose_atm' %}">대전</a><a href="{% url 'choose_atm' %}"> 부산 </a> <a href="{% url 'choose_atm' %}">제주도</a></p>       
+        </div>
+</body>
+</html>

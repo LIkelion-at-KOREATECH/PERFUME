@@ -1,4 +1,4 @@
-#!c:\users\김원석\desktop\perfume\myvenv\scripts\python.exe
+#!c:\users\김원석\desktop\새 폴더 (4)\myvenv\scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

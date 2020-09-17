@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+
+{% if user.is_authenticated %}
+<script>
+  alert('로그인 성공하셨습니다.');
+</script>
+<a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+<form action ="{% url 'logout' %}" method="POST" id="logout">
+{% csrf_token %} <input type="hidden">
+</form>
+{{ user.name }}님 환영합니다.
+{% else %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <style>
+          .under-bar {
+            margin-left: 50px;
+          }
+          .sign-footer-left-item {
+            text-decoration: none;
+          }
+          .sign-footer-left-item:hover {
+            background: silver;
+          }
+          .sign-footer-right-item{
+            text-decoration: none;
+          }
+          .right-item-hover:hover{
+            background: silver;
+          }
+        </style>
+        <!-- 메인 상위 로고 이미지   -->
+        <span class="title">
+            <img src="{% static 'image/logo.png' %}" width=350 height=130 alt="logo.png">
+        </span>
+        <span class="cloud">
+            <img src="{% static 'image/cloud.png' %}" alt="cloud.png">
+        </span>
+    </head>
+    <br>
+    <body>
+          <!-- 좌측 중앙 이미지   -->
+          <span class="body_picture">
+            <img src="{% static 'image/perfume_and_nation.png' %}"  width= 550 height=420 alt="perfume_and_nation.png">
+          </span>
+          <!--  우측 입력 폼    -->
+          <span class="all_form">
+            <form action="" method="POST">
+               {% csrf_token %}
+               <div class="form">
+                  ID
+                  <br>
+                  <input name="email" type="text" id="email">
+                  <br>
+                  PASSWORD
+                  <br>
+                  <input name="password" type="password" id="email">
+                  <br>
+                  <input type="submit" class="login_btn" value="로그인">
+               </div>
+            </form>
+            <br>
+          </span>
+    </body>
+    <footer> 
+          <!--  하단 footer    -->
+          <div class="sign_footer">
+              <p class="sign-footer-right-item">아직 perfume 회원이 아니시라면?</p>
+              &nbsp&nbsp&nbsp
+              <a href="{% url 'signup' %}" class="sign-footer-right-item  right-item-hover">회원가입</a>
+          </div>
+          <div class="under-bar">
+            <a href="{% url 'introduce' %}" class="sign-footer-left-item">소개</a>
+            &nbsp&nbsp&nbsp
+            <a href="{% url 'policy' %}" class="sign-footer-left-item">이용약관</a>
+          </div>
+    </footer>
+</html>
+
+{% endif %}

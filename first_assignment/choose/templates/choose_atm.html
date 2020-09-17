@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume_chooser</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        div{text-align:center;}
+    </style>
+    <style type="text/css"> 
+        a { text-decoration:none } 
+    </style> 
+
+</head>
+<body>
+    <div class = "title">
+        Perfume
+    </div>
+    
+    <div class= "subtitle">
+        어떤 분위기를 선호하세요?
+    </div>
+   
+        <div class ="choose_circle">
+            <a href="{% url 'choose3' %}"><img src ="{% static 'css/img/choose_circle.PNG'%}" > </a>
+            <a href="{% url 'choose3' %}"><img src ="{% static 'css/img/choose_circle.PNG'%}" > </a>
+            <a href="{% url 'choose3' %}"><img src ="{% static 'css/img/choose_circle.PNG'%}" > </a>
+            <p class="region"><a href="{% url 'choose3' %}">조용한 </a><a href="{% url 'choose3' %}"> 활기찬 </a> <a href="{% url 'choose3' %}">화려한</a></p>
+        </div>
+    </div>
+
+    <div class ="back">
+        <br><br><br>
+        <a href="{% url 'choose' %}">뒤로가기</a>
+</body>
+</html>

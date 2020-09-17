@@ -142,7 +142,9 @@ a {
     margin-left: 10%;
     display: table;
     position: relative;
-    width: 30%;
+    width: 500px;
+    height: 200px;
+    overflow: hidden;
     font-weight: bold;
     font-family: Bold;
 }
@@ -157,11 +159,11 @@ a {
     color: #8b5eb4ac;
 }
 
-
 table {
     color: #934BF1;
     background-color: #fff9d4e0;
     margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 td {
@@ -186,5 +188,5 @@ td {
 
 /* 게시글 */
 .search-image {
-    width: 200px;
+    /* width: 200px; */
 }

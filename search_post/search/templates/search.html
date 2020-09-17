@@ -52,42 +52,31 @@
     </div>
 
     <!-- 게시글 -->
+    {% for post in posts.all %}
     <secion class="post-series">
         <table>
             <i class="fas fa-2x fa-map-marker-alt"></i>
-            <span class="lo-name">내가보쌈</span>
+            <span class="lo-name">{{ post.address }}</span>
             <!-- <img class="posting-lo" alt="게시글 위치" src="{% static 'images/locator.png' %}"> -->
             <tr class="se-row">
-                <td rowspan="5"><img class="search-image" alt="이미지"
-                        src="{% static 'images/baseline_person_purple.png' %}"></td>
+                <td rowspan="5"><img class="search-image" alt="이미지" src="{{ post.image.url }}"></td>
+                <!-- {% static 'images/baseline_person_purple.png' %} -->
                 <td><img class="posting-user" alt="게시글 작성자" src="{% static 'images/baseline_person_purple.png' %}">
                     <span class="search-visitor">42명의 사람들이 방문했습니다.</span></td>
             </tr>
             <tr>
                 <td><i class="fas fa-clock"> 약 6시간 전</i>
-                    <p class="search-content">터미널에서 버스 기다리다가 시간도 때울 겸 해서 들어왔는데 너무 맛있...</p>
+                    <p class="search-content">{{ post.description }}</p>
                 </td>
             </tr>
             <tr>
                 <td><i class="fas fa-clock"> 약 3시간 전</i>
-                    <p class="search-content">친구랑 점심먹으로 들렸어요.</p>
+                    <p class="search-content">{{ post.description }}</p>
                 </td>
             </tr>
         </table>
-
-        <!-- <div class="post-container">
-
-            <img class="search-image" alt="이미지" src="{% static 'images/baseline_person_purple.png' %}">
-
-            <img class=" posting-user" alt="게시글 작성자" src="{% static 'images/baseline_person_purple.png' %}">
-            <span class="visitor">42명의 사람들이 방문했습니다.</span>
-            <i class="fas fa-clock">약 6시간 전</i>
-            <span class="search-content">터미널에서 버스 기다리다가 시간도 때울 겸 해서 들어왔는데 너무 맛있...</span>
-            <i class="fas fa-clock">약 3시간 전</i>
-            <span class="search-content">친구랑 점심먹으로 들렸어요.</span>
-
-        </div> -->
     </secion>
+    {% endfor %}
 </body>
 
 </html>

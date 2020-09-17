@@ -21,27 +21,27 @@
     <nav class="nav-container">
 
         <div class="nav-div1">
-            <span class="nav-title">Perfume</span>
+            <a href="{% url 'choose' %}"><span class="nav-title">Perfume</span></a>
         </div>
 
         <div class="nav-div2">
-            <img class="nav-item" src="{% static 'image/imgsharp_search_white_18dp.png'%}">
-            <img class="nav-item" src="{% static 'image/img/sharp_mail_outline_white_18dp.png'%}">
-            <img class="nav-item" src="{% static 'image/baseline_person_white_18dp.png'%}">
-            <span class="nav-   ">게시글 작성</span>
-            <img class="nav-item" src="{% static 'imgage/sharp_subject_white_18dp.png'%}">
-
+            <span class="nav-">게시글 작성</span>
         </div>
     </nav>
 
-    {% for blog in blogs.all%}
-    <h1>{{blog.title}}</h1>
-    <p>{{blog.name}}</p>
-    <p>{{blog.pub_date}}</p>
-    <p>{{blog.body}}</p>
-    <br><br>
+    
+    {% for blog in blogs.all %}
+    <div class ="user">
+        <div class="name"><image src="{% static 'image/person.png'%}">{{blog.name}}</div>    
+        <div class="address">address : {{blog.address}}</div>
+        <p>{{blog.pub_date}}uploaded</p>
+        <h3 class="title">title : {{blog.title}}</h3>
+        <img class="profile" alt="이미지" src="{{ blog.image.url }}" style="width:300px">
+        <p>{{blog.body}}</p>
+        <br><br>
+    </div>
 
-    {%endfor%}    
+{%endfor%}    
 </body>
 </html>
 

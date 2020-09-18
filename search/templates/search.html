@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 검색</title>
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <!-- FontAwesome 아이콘 적용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="nav-container">
+        <div class="nav-div1">
+            <a href="{% url 'home' %}"><span class="nav-title">Perfume</span></a>
+        </div>
+        <div class="nav-div2">
+            <img class="nav-item" alt="검색" src="{% static 'image/sharp_search_white_18dp.png' %}">
+            <img class="nav-item" alt="메세지함" src="{% static 'image/sharp_mail_outline_white_18dp.png' %}">
+            <img class="nav-item" alt="내 프로필" src="{% static 'image/baseline_person_white_18dp.png' %}">
+            <span class="nav-item">게시글 작성</span>
+            <img class="nav-item" src="{% static 'image/sharp_subject_white_18dp.png' %}">
+        </div>
+    </nav>
+
+    <!-- 사용자가 선택한 옵션 - 지역, 분위기 -->
+    <div class="choose">
+        <span class="local">천안시, 두정동, 조용한</span>
+        <img class="lo-info-item" alt="위치 on/off" src="{% static 'image/location_onoff_18dp.png' %}">
+        <span class="lo-info">위치정보</span>
+    </div>
+
+    <!-- 사용자 프로필 -->
+    <div class="profile">
+        <img class="profile-item" alt="내 프로필 사진" src="{% static 'image/baseline_person_purple&pink.png' %}">
+        <h3 class="profile-name">김원석</h3>
+    </div>
+
+    <!-- 카테고리 -->
+    <div class="category">
+        <a class="cate-item " href="" style="color:#934BF1">전체보기</a>
+        <p id="l">|</p>
+        <a class="cate-item" href="">식당</a>
+        <a class="cate-item" href="">카페</a>
+        <a class="cate-item" href="">숙소</a>
+        <a class="cate-item" href="">관광지</a>
+        <a class="cate-item" href="">기타</a>
+    </div>
+
+    <!-- 게시글 -->
+
+    <secion class="post-series">
+        {% for blog in blogs.all %}
+
+        {% if blog.image %}
+        <table>
+            <i class="fas fa-2x fa-map-marker-alt"></i>
+            <span class="lo-name">{{ blog.address }}</span>
+
+            <tr class="se-row">
+                <td rowspan="5"><img class="search-image" alt="이미지" src="{{ blog.image.url }}"></td>
+            </tr>
+
+            <tr>
+                <td><img class="posting-user" alt="게시글 작성자" src="{% static 'image/baseline_person_purple.png' %}">
+                    <span class="search-visitor"><u>42명</u>의 사람들이 방문했습니다.</span></td>
+            </tr>
+
+            <tr>
+                <td><i class="fas fa-clock"> {{ blog.pub_date}}</i>
+                    <p class="search-content">{{ blog.body }}</p>
+                </td>
+            </tr>
+
+        </table>
+
+        {% else %}
+        <h3 style="text-align:center">검색 결과가 없습니다.</h3>
+        {% endif %}
+
+        {% endfor %}
+    </secion>
+
+</body>
+
+</html>

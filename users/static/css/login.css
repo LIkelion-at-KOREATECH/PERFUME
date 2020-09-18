@@ -2,48 +2,68 @@
     margin-top: 100px;
     margin-left: 600px;
 }
+
 .body_picture {
     margin-left: 100px;
 }
+
 .all_form {
     float: right;
     margin-right: 120px;
     margin-top: 65px;
 }
+
 .form {
     color: #934BF1;
     font-size: 25px;
     font-weight: bold;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
+
 input {
     border-radius: 5px;
     justify-content: flex-end;
     width: 500px;
     height: 50px;
+    margin-bottom: 10px;
 }
+
 .login_btn {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 508px;
     height: 50px;
     background-color: #F6F2DA;
     color: grey;
     border-radius: 5px;
     font-size: 25px;
+    cursor: pointer;
+    font-weight: bold;
 }
+
+.login_btn:hover {
+    color: #934BF1;
+    font-weight: bold;
+    background-color: #f0e8bf;
+}
+
 .sign_footer {
-    margin-left: 950px;
+    margin-left: 840px;
     color: #934BF1;
     display: table;
     font-size: 20px;
     text-decoration: none;
+    font-family: Bold;
 }
+
 .sign-footer-right-item {
     display: table-cell;
     font-size: 20px;
     color: #934BF1;
     word-spacing: 3px;
     text-decoration: none;
+    font-family: Bold;
 }
+
 .sign-footer-left-item {
     display: table-cell;
     font-size: 20px;
@@ -51,26 +71,53 @@ input {
     word-spacing: 3px;
     text-decoration: none;
 }
+
 .under-bar {
     display: table;
     text-decoration: none;
 }
 
-#title{
-    color:#934BF1;
-    text-align:center;
-    font-family:Georgia;
+#title {
+    color: #934BF1;
+    text-align: center;
+    font-family: Georgia;
     font-weight: 400;
-    font-size:50px;
-    margin-top:30px;
-    margin-bottom:10px;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-#sub{
-    color:#934BF1;
-    text-align:center;
-    font-family:Georgia;
-    margin:0;
-    font-size:15px;
+#sub {
+    color: #934BF1;
+    text-align: center;
+    font-family: Georgia;
+    margin: 0;
+    font-size: 15px;
+}
 
+/*  */
+
+.under-bar {
+    margin-left: 50px;
+}
+
+.sign-footer-left-item {
+    text-decoration: none;
+}
+
+.sign-footer-left-item:hover {
+    background: silver;
+}
+
+.sign-footer-right-item {
+    text-decoration: none;
+}
+
+.right-item-hover:hover {
+    background: silver;
+}
+
+.re {
+    text-align: center;
+    margin: 20px;
 }

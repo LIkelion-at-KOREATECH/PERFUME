@@ -1,5 +1,3 @@
-/* Nanum Gothic글꼴 : 두께 400, 700, 800 사용가능*/
-
 * {
     box-sizing: border-box;
     background-color: #934BF1;
@@ -12,10 +10,12 @@ body {
 /* 로고 */
 .title {
     margin: 90px 0 0 0;
-    font-family: 'Italianno', cursive;
+    font-family: Georgia;
+    font-style: italic;
     font-size: 80px;
     font-weight: normal;
     text-align: center;
+    color: white;
 }
 
 /* 선택지 */
@@ -38,7 +38,7 @@ body {
 a {
     text-decoration: none;
     color: white;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: Bold;
     font-weight: 800;
 }
 
@@ -61,7 +61,7 @@ p {
     font-size: 25px;
     /* 두께 400, 700, 800 사용가능*/
     font-weight: 400;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: Bold;
     font-size: 20px;
     padding: 0;
 }

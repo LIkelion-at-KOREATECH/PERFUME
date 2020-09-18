@@ -10,17 +10,18 @@
 <script>
   alert('로그인 성공하셨습니다.');
 </script>
-<div>
+
+<div class="re">
+  {{ user.name }}님 환영합니다.
+</div>
+<div class="re">
   <a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
 </div>
 <form action="{% url 'logout' %}" method="POST" id="logout">
   {% csrf_token %} <input type="hidden">
 </form>
-<div>
+<div class="re">
   <a href="{% url 'home'%}" style="text-align:center;">홈으로</a>
-</div>
-<div style="text-align: center;">
-  {{ user.name }}님 환영합니다.
 </div>
 {% else %}
 <html>
@@ -28,27 +29,6 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="{% static 'css/login.css' %}">
-  <style>
-    .under-bar {
-      margin-left: 50px;
-    }
-
-    .sign-footer-left-item {
-      text-decoration: none;
-    }
-
-    .sign-footer-left-item:hover {
-      background: silver;
-    }
-
-    .sign-footer-right-item {
-      text-decoration: none;
-    }
-
-    .right-item-hover:hover {
-      background: silver;
-    }
-  </style>
   <!-- 메인 상위 로고 이미지   -->
   <a id="logo" href="{% url 'home' %}" style="text-decoration : none;">
     <h1 id="title"><em>perfume</em></h1>
@@ -69,11 +49,11 @@
       <div class="form">
         ID
         <br>
-        <input name="email" type="text" id="email">
+        <input name="email" type="text" id="email" placeholder="이메일을 입력하세요.    ex) 젊은@likelion.org">
         <br>
         PASSWORD
         <br>
-        <input name="password" type="password" id="email">
+        <input name="password" type="password" id="email" placeholder="비밀번호를 입력하세요.">
         <br>
         <input type="submit" class="login_btn" value="로그인">
       </div>
@@ -86,12 +66,12 @@
   <div class="sign_footer">
     <p class="sign-footer-right-item">아직 perfume 회원이 아니시라면?</p>
     &nbsp&nbsp&nbsp
-    <a href="{% url 'signup' %}" class="sign-footer-right-item  right-item-hover">회원가입</a>
+    <a href="{% url 'signup' %}" class="sign-footer-right-item  right-item-hover"><u>회원가입</u></u></a>
   </div>
   <div class="under-bar">
-    <a href="{% url 'introduce' %}" class="sign-footer-left-item">소개</a>
+    <a href="{% url 'introduce' %}" class="sign-footer-left-item"><u>소개</u></a>
     &nbsp&nbsp&nbsp
-    <a href="{% url 'policy' %}" class="sign-footer-left-item">이용약관</a>
+    <a href="{% url 'policy' %}" class="sign-footer-left-item"><u>이용약관</u></a>
   </div>
 </footer>
 

@@ -21,7 +21,7 @@
             <div>
                 <!--이름 입력창-->
                 <label style="color:#934BF1; font-weight:700;">EMAIL</label><br>
-                <input type="email" name="email" placeholder="이메일을 입력하세요." id="email" required>
+                <input type="email" name="email" placeholder="이메일을 입력하세요.  ex) 의현님짱@likelion.org" id="email" required>
             </div>
             <div>
                 <!--ID입력창-->
@@ -52,8 +52,8 @@
         </div>
     </form>
     <footer class="footer">
-        <p id="introduce">perfume은 맞춤형 여행정보 제공 및 공유 서비스입니다.</p><a href="{% url 'introduce' %}">더 알아보기</a>
-        <a href="{% url 'policy' %}" id="terms" style="font-weight:400;">이용약관</a>
+        <p id="introduce">perfume은 맞춤형 여행정보 제공 및 공유 서비스입니다.</p><a class="look" href="{% url 'introduce' %}">더 알아보기</a>
+        <a href="{% url 'policy' %}" class="look" style="font-weight:400;">이용약관</a>
     </footer>
 </body>
 

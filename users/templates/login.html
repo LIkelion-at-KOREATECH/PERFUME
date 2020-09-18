@@ -1,16 +1,26 @@
 {% load static %}
 <!DOCTYPE html>
-
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% if user.is_authenticated %}
+<a id="logo" href="{% url 'home' %}" style="text-decoration : none;">
+  <h1 id="title"><em>perfume</em></h1>
+</a>
+<h6 id="sub">Leave perfume where you're staying</h6>
 <script>
   alert('로그인 성공하셨습니다.');
 </script>
-<a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+<div>
+   <a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+</div>
 <form action ="{% url 'logout' %}" method="POST" id="logout">
 {% csrf_token %} <input type="hidden">
 </form>
-<a href="{% url 'home'%}">홈으로</a>
-{{ user.name }}님 환영합니다.
+<div>
+   <a href="{% url 'home'%}" style ="text-align:center;" >홈으로</a>
+</div>
+<div style = "text-align: center;">
+   {{ user.name }}님 환영합니다.
+</div>
 {% else %}
 <html>
     <head>
@@ -34,12 +44,10 @@
           }
         </style>
         <!-- 메인 상위 로고 이미지   -->
-        <span class="title">
-            <img src="{% static 'image/logo.png' %}" width=350 height=130 alt="logo.png">
-        </span>
-        <span class="cloud">
-            <img src="{% static 'image/cloud.png' %}" alt="cloud.png">
-        </span>
+        <a id="logo" href="{% url 'home' %}" style="text-decoration : none;">
+          <h1 id="title"><em>perfume</em></h1>
+        </a>
+        <h6 id="sub">Leave perfume where you're staying</h6>
     </head>
     <br>
     <body>

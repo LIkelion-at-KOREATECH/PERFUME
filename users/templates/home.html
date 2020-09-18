@@ -35,19 +35,16 @@
 
 
     {% for blog in blogs.all %}
-    <div class="user">
-        <div class="name">
-            <image src="{% static 'image/person.png'%}">{{blog.name}}
-        </div>
+    <div class ="user">
+        <div class="name"><image src="{% static 'image/person.png'%}">{{blog.name}}</div>    
         <div class="address">address : {{blog.address}}</div>
-        <p>{{blog.pub_date}}uploaded</p>
+        <p>{{blog.registered_dttm}}uploaded</p>
         <h3 class="title">title : {{blog.title}}</h3>
         <img class="profile" alt="이미지" src="{{ blog.image.url }}" style="width:300px">
         <p>{{blog.body}}</p>
         <br><br>
     </div>
 
-    {%endfor%}
+{%endfor%}    
 </body>
-
 </html>

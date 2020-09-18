@@ -24,12 +24,13 @@ class User(AbstractUser):
 
 
 class Blog(models.Model):
+    image = models.ImageField(blank=True, upload_to='media/')
     address = models.CharField(max_length = 100)
+    atm = models.CharField(max_length=100)
     name = models.CharField(max_length=20)
     title = models.CharField(max_length=200)
-    image = models.ImageField('image/')
-    pub_date = models.DateTimeField('date published')
     body = models.TextField()
+    registered_dttm = models.DateTimeField(auto_now_add=True)
 
 
     def __str__(self):

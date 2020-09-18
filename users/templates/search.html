@@ -16,29 +16,37 @@
     <!-- navbar -->
     <nav class="nav-container">
         <div class="nav-div1">
-            <a href="{% url 'home' %}"><span class="nav-title">Perfume</span></a>
+            <a href="{% url 'search' %}"><span class="nav-title">Perfume</span></a>
         </div>
         <div class="nav-div2">
             <img class="nav-item" alt="검색" src="{% static 'image/sharp_search_white_18dp.png' %}">
             <img class="nav-item" alt="메세지함" src="{% static 'image/sharp_mail_outline_white_18dp.png' %}">
             <img class="nav-item" alt="내 프로필" src="{% static 'image/baseline_person_white_18dp.png' %}">
-            <span class="nav-item">게시글 작성</span>
+            <span class="nav-item" ><a href="{% url 'post' %}">게시글 작성</a></span>
             <img class="nav-item" src="{% static 'image/sharp_subject_white_18dp.png' %}">
         </div>
     </nav>
+    <div class="nav-div3">
+        <div class ="item1">
+            <img class="lo-info-item" alt="위치 on/off" src="{% static 'image/location_onoff_18dp.png' %}">
+            <span class="lo-info">위치정보</span>
+        </div>
+    </div>
 
     <!-- 사용자가 선택한 옵션 - 지역, 분위기 -->
-    <div class="choose">
-        <span class="local">천안시, 두정동, 조용한</span>
-        <img class="lo-info-item" alt="위치 on/off" src="{% static 'image/location_onoff_18dp.png' %}">
-        <span class="lo-info">위치정보</span>
+    {% if user.is_authenticated %}
+    <div class="re">
+        {{ user.name }}님 환영합니다.
     </div>
+    <div class="re">
+        <a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+    </div>
+    <form action="{% url 'logout' %}" method="POST" id="logout">
+        {% csrf_token %} <input type="hidden">
+    </form>    
+    {% endif %}
 
     <!-- 사용자 프로필 -->
-    <div class="profile">
-        <img class="profile-item" alt="내 프로필 사진" src="{% static 'image/baseline_person_purple&pink.png' %}">
-        <h3 class="profile-name">김원석</h3>
-    </div>
 
     <!-- 카테고리 -->
     <div class="category">
@@ -57,26 +65,33 @@
         {% for blog in blogs.all %}
 
         {% if blog.image %}
-        <table>
+        <div>
             <i class="fas fa-2x fa-map-marker-alt"></i>
             <span class="lo-name">{{ blog.address }}</span>
+                    <span class="local">{{blog.atm}}</span>
+                <div class="profile">
+                    <img class="profile-item" alt="내 프로필 사진" src="{% static 'image/baseline_person_purple&pink.png' %}">
+                    <h3 class="profile-name">{{blog.name}}</h3>
+                </div>
+            <table class="Post">
+                <h3 class="title">title : {{blog.title}}</h3>
+                <tr class="se-row">
+                    <td rowspan="5"><img class="search-image" alt="이미지" src="{{ blog.image.url }}"></td>
+                </tr>
 
-            <tr class="se-row">
-                <td rowspan="5"><img class="search-image" alt="이미지" src="{{ blog.image.url }}"></td>
-            </tr>
+                <tr>
+                    <td><img class="posting-user" alt="게시글 작성자" src="{% static 'image/baseline_person_purple.png' %}">
+                        <span class="search-visitor"><u>42명</u>의 사람들이 방문했습니다.</span></td>
+                </tr>
 
-            <tr>
-                <td><img class="posting-user" alt="게시글 작성자" src="{% static 'image/baseline_person_purple.png' %}">
-                    <span class="search-visitor"><u>42명</u>의 사람들이 방문했습니다.</span></td>
-            </tr>
+                <tr>
+                    <td><i class="fas fa-clock"> {{blog.registered_dttm}}</i>
+                        <p class="search-content">{{ blog.body }}</p>
+                    </td>
+                </tr>
+            </table>
 
-            <tr>
-                <td><i class="fas fa-clock"> {{ blog.pub_date}}</i>
-                    <p class="search-content">{{ blog.body }}</p>
-                </td>
-            </tr>
-
-        </table>
+        </div>
 
         {% else %}
         <h3 style="text-align:center">검색 결과가 없습니다.</h3>

@@ -16,4 +16,5 @@ urlpatterns = [
     path('choose3/', views.choose3, name="choose3"),
     path('home/', views.home, name="home"),
     path('post/', views.post, name="post"),
+    path('search/', views.search, name="search"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

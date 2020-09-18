@@ -8,7 +8,7 @@
        <link rel="stylesheet" href="{% static 'css/post.css' %}">
     </head>
     <body>
-        <a id="logo" href="{% url 'home' %}" style="text-decoration : none;">
+        <a id="logo" href="{% url 'search' %}" style="text-decoration : none;">
             <h1 id="logo"><em>perfume</em></h1>
         </a>
         <h6 id="sub">Leave perfume where you're staying</h6>
@@ -44,6 +44,6 @@
                     <label style="color:#934BF1; font-weight:700;">내용</label><br>
                     <textarea id = "body" name = "body" cols="40" rows="10" required></textarea>
                 </div>
-                <button type ="submit"  id="post-btn">등록</button> 
+                <button type ="submit"  id="post-btn"><a href="{% url 'search'%}">등록</a></button> 
     </body>
 </html>

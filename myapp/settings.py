@@ -38,9 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
-    
-    # 게시글 검색
-    'search.apps.SearchConfig',
 ]
 
 MIDDLEWARE = [

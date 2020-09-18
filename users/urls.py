@@ -14,5 +14,5 @@ urlpatterns = [
     path('choose/', views.choose, name="choose"),
     path('atm/', views.choose_atm, name="choose_atm"),
     path('choose3/', views.choose3, name="choose3"),
-    path('home/',views.home, name="home"),
+    path('home/', views.home, name="home"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

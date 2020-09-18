@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    
+    # 게시글 검색
+    'search.apps.SearchConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,8 +126,10 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.User'
 
 STATICFILES_DIRS= [
-        os.path.join(BASE_DIR, 'static'),
+        os.path.join(BASE_DIR, 'users', 'static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')    # static파일 모을 위치
+  
 
 SILENCED_SYSTEM_CHECKS = ['auth.E003']
 

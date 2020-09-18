@@ -1,3 +1,4 @@
+<!-- 게시글 작성 or 검색 선택 페이지 -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +32,7 @@
 
         <!-- 게시글 검색 -->
         <div class="choice">
-            <a class="either" href="">게시글 검색
+            <a class="either" href="{% url 'search' %}">게시글 검색
                 <p>정보를 얻고 싶다면?</p>
             </a>
         </div>

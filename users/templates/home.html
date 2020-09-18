@@ -1,19 +1,21 @@
+<!-- 로고 선택하면 나오는 페이지 -->
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
+
 <body>
     {% if user.is_authenticated %}
 
     <a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
-    <form action ="{% url 'logout' %}" method="POST" id="logout" >
-    {% csrf_token %} <input type="hidden" >
+    <form action="{% url 'logout' %}" method="POST" id="logout">
+        {% csrf_token %} <input type="hidden">
     </form>
     {{ user.name }}님 환영합니다.
     {% else %}
@@ -31,10 +33,12 @@
         </div>
     </nav>
 
-    
+
     {% for blog in blogs.all %}
-    <div class ="user">
-        <div class="name"><image src="{% static 'image/person.png'%}">{{blog.name}}</div>    
+    <div class="user">
+        <div class="name">
+            <image src="{% static 'image/person.png'%}">{{blog.name}}
+        </div>
         <div class="address">address : {{blog.address}}</div>
         <p>{{blog.pub_date}}uploaded</p>
         <h3 class="title">title : {{blog.title}}</h3>
@@ -43,7 +47,7 @@
         <br><br>
     </div>
 
-{%endfor%}    
+    {%endfor%}
 </body>
-</html>
 
+</html>

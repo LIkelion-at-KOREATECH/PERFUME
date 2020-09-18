@@ -3,6 +3,8 @@ from django.contrib.auth import authenticate, logout
 from .models import User , Blog
 from django.contrib import auth
 from django.contrib.auth import login
+# DB 이용할때, 시간 기능 사용
+from django.utils import timezone
 
 
 #Create your views here.

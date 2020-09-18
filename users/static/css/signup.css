@@ -113,3 +113,17 @@ body {
 footer {
     margin-bottom: 30px;
 }
+
+/* 뒤로가기 버튼 */
+.back-btn {
+    position: fixed;
+    left: 50px;
+    bottom: 40px;
+    color: black;
+    font-size: 25px;
+    /* 두께 400, 700, 800 사용가능*/
+    font-weight: 400;
+    font-family: Bold;
+    font-size: 20px;
+    padding: 0;
+}

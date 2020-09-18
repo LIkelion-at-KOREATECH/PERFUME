@@ -62,3 +62,16 @@
     color: #A087C2;
     word-spacing: 50px;
 }
+
+/* 뒤로가기 버튼 */
+.back-btn {
+    position: fixed;
+    left: 50px;
+    bottom: 40px;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: Bold;
+    font-size: 20px;
+    padding: 0;
+}

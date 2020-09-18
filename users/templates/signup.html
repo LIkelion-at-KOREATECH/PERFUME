@@ -8,6 +8,8 @@
     <meta charset="UTF-8">
     <title>Sign up</title>
     <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <!-- FontAwesome 아이콘 적용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 
 <body>
@@ -51,9 +53,19 @@
             <button type="submit" id="submit-btn">회원가입</button>
         </div>
     </form>
+
+    <!-- 뒤로가기 버튼 -->
+    <div>
+        <a class="back-btn" href="{% url 'login' %}">
+            <span class="fas fa-arrow-left">&nbsp;&nbsp;&nbsp;뒤로가기</span>
+        </a>
+    </div>
+
     <footer class="footer">
         <p id="introduce">perfume은 맞춤형 여행정보 제공 및 공유 서비스입니다.</p><a class="look" href="{% url 'introduce' %}">더 알아보기</a>
         <a href="{% url 'policy' %}" class="look" style="font-weight:400;">이용약관</a>
+
+
     </footer>
 </body>
 

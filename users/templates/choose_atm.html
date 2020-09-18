@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfume_chooser</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- FontAwesome 아이콘 적용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <style>
         div {
             text-align: center;
@@ -49,9 +51,12 @@
     </div>
     </div>
 
-    <div class="back">
-        <br><br><br>
-        <a href="{% url 'choose' %}">뒤로가기</a>
+    <!-- 뒤로가기 버튼 -->
+    <div>
+        <a class="back-btn" href="{% url 'choose' %}">
+            <span class="fas fa-arrow-left">&nbsp;&nbsp;&nbsp;뒤로가기</span>
+        </a>
+    </div>
 </body>
 
 </html>

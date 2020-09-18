@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfume_chooser</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- FontAwesome 아이콘 적용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <style>
         div {
             text-align: center;
@@ -57,6 +59,13 @@
         <a href="{% url 'choose_atm' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
         <p class="region"><a href="{% url 'choose_atm' %}">대전</a><a href="{% url 'choose_atm' %}"> 부산 </a> <a
                 href="{% url 'choose_atm' %}">제주도</a></p>
+    </div>
+
+    <!-- 뒤로가기 버튼 -->
+    <div>
+        <a class="back-btn" href="{% url 'home' %}">
+            <span class="fas fa-arrow-left">&nbsp;&nbsp;&nbsp;뒤로가기</span>
+        </a>
     </div>
 </body>
 

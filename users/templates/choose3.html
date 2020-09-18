@@ -20,26 +20,18 @@
     <div class="title">
         perfume
     </div>
-    {% if user.is_authenticated %}
-
-    <a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
-    <form action ="{% url 'logout' %}" method="POST" id="logout">
-    {% csrf_token %} <input type="hidden">
-    </form>
-    {{ user.name }}님 환영합니다.
-    {% endif %}
 
     <div id="list">
         <!-- 게시글 작성 -->
         <div class="choice">
-            <a class="either" href="{% url 'home' %}">게시글 작성
+            <a class="either" href="{% url 'post' %}">게시글 작성
                 <p>정보를 공유하고 싶다면?</p>
             </a>
         </div>
 
         <!-- 게시글 검색 -->
         <div class="choice">
-            <a class="either" href="">게시글 검색
+            <a class="either" href="{% url 'home'%}">게시글 검색
                 <p>정보를 얻고 싶다면?</p>
             </a>
         </div>

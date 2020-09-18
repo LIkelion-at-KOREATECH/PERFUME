@@ -72,3 +72,19 @@ def choose3(request):
 def home(request):
     blogs=Blog.objects #전달받은 객체 (쿼리셋) 
     return render(request, 'home.html', {'blogs':blogs})
+
+def post(request):
+    if request.method == "GET":
+        return render(request, 'post.html')
+    elif request.method == "POST":
+        image = request.FILES.get('image', None)
+        address = request.POST.get('address', None)
+        atm = request.POST.get('atm', None)
+        name = request.POST.get('name', None)
+        title = request.POST.get('title', None)
+        body = request.POST.get('body', None)
+        
+        blog = Blog(image=image, address=address, atm=atm, name=name, title=title, body=body)
+        blog.save()
+
+        return render(request, 'home.html')

@@ -38,7 +38,7 @@ body {
 a {
     text-decoration: none;
     color: white;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: Bold;
     font-weight: 800;
 }
 
@@ -61,7 +61,7 @@ p {
     font-size: 25px;
     /* 두께 400, 700, 800 사용가능*/
     font-weight: 400;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: Bold;
     font-size: 20px;
     padding: 0;
 }

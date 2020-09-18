@@ -1,16 +1,37 @@
+body {
+    margin-bottom: 30px;
+}
 
 .slide-items {
-    width: 1500px;
+    max-width: 1500px;
     height: 750px;
+
+    /* 가운데 정렬 */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 .btn {
     text-decoration: none;
-    margin-left: 700px;
     font-size: 30px;
-    color:white;
-    background-color:#934BF1;
+    color: white;
+    background-color: #934BF1;
     padding: 10px 20px 10px 20px;
     display: inline-block;
     border-radius: 10px;
     transition: all 0.1s;
+    margin-top: 30px;
+
+    /* 가운데 정렬 */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn:hover {
+    color: #934BF1;
+    background-color: white;
+    border: 3px solid #934BF1;
+    border-radius: 10px;
 }

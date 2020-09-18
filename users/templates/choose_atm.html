@@ -19,6 +19,23 @@
         a {
             text-decoration: none
         }
+
+        span {
+            font-weight: bold;
+        }
+
+        .check-btn {
+            color: #bfadd8;
+        }
+
+        .check-btn:hover {
+            color: #823eda;
+        }
+
+        .region {
+            color: #A087C2;
+            word-spacing: 43px;
+        }
     </style>
 
 </head>
@@ -43,11 +60,16 @@
     </div>
 
     <div class="choose_circle">
-        <a href="{% url 'choose3' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
-        <a href="{% url 'choose3' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
-        <a href="{% url 'choose3' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
-        <p class="region"><a href="{% url 'choose3' %}">조용한 </a><a href="{% url 'choose3' %}"> 활기찬 </a> <a
-                href="{% url 'choose3' %}">화려한</a></p>
+        <a class="check-btn" href="{% url 'choose3' %}"><span class="fas fa-5x fa-circle"></span>&nbsp;&nbsp;&nbsp;</a>
+        <a class="check-btn" href="{% url 'choose3' %}"><span class="fas fa-5x fa-circle"></span>&nbsp;&nbsp;&nbsp;</a>
+        <a class="check-btn" href="{% url 'choose3' %}"><span class="fas fa-5x fa-circle"></span>&nbsp;&nbsp;</a>
+        <p class="region">
+            <span>조용한</span>
+            <span>활기찬</span>
+            <span>화려한</span>
+        </p>
+        <!-- <p class="region"><a href="{% url 'choose3' %}">조용한 </a><a href="{% url 'choose3' %}"> 활기찬 </a> <a
+                href="{% url 'choose3' %}">화려한</a></p> -->
     </div>
     </div>
 

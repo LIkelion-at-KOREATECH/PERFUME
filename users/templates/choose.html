@@ -1,5 +1,6 @@
-<!-- 지역 선택 페이지 -->
 {% load static %}
+<!-- 지역 선택 페이지 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,12 +12,72 @@
     <!-- FontAwesome 아이콘 적용 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <style>
+        /* css파일과 연동이 안됨 ★ 왜그러지? */
+        .title {
+            color: #934BF1;
+            font-family: Georgia;
+            font-size: 500%;
+            text-align: center;
+            margin-top: 100px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .subtitle {
+            color: #AB9CBE;
+            font-family: Bold;
+            font-size: 130%;
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: auto;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .choose_circle {
+            width: 300px;
+            margin-top: 50px;
+            margin-bottom: auto;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+
         div {
             text-align: center;
         }
 
         a {
-            text-decoration: none
+            text-decoration: none;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .check-btn {
+            color: #bfadd8;
+        }
+
+        .check-btn:hover {
+            color: #823eda;
+        }
+
+        .choose_circle2 {
+            margin-top: 30px;
+            margin-bottom: auto;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .region {
+            color: #A087C2;
+            word-spacing: 65px;
+        }
+
+        .region2 {
+            color: #A087C2;
+            word-spacing: 70px;
         }
     </style>
 
@@ -43,22 +104,30 @@
     </div>
 
     <div class="choose_circle">
-        <a href="{% url 'choose_atm' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
-        <a href="{% url 'choose_atm' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
-        <a href="{% url 'choose_atm' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
+        <a class="check-btn" href="{% url 'choose_atm' %}"><span
+                class="fas fa-5x fa-circle"></span>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="check-btn" href="{% url 'choose_atm' %}"><span
+                class="fas fa-5x fa-circle"></span>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="check-btn" href="{% url 'choose_atm' %}"><span class="fas fa-5x fa-circle"></span>&nbsp;&nbsp;</a>
         <p class="region">
-            <a href="{% url 'choose_atm' %}">서울</a>
-            <a href="{% url 'choose_atm' %}">인천 </a>
-            <a href="{% url 'choose_atm' %}">천안</a>
+            <span>서울</span>
+            <span>인천</span>
+            <span>천안</span>
         </p>
     </div>
 
     <div class="choose_circle2">
-        <a href="{% url 'choose_atm' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
-        <a href="{% url 'choose_atm' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
-        <a href="{% url 'choose_atm' %}"><img src="{% static 'image/choose_circle.PNG'%}"> </a>
-        <p class="region"><a href="{% url 'choose_atm' %}">대전</a><a href="{% url 'choose_atm' %}"> 부산 </a> <a
-                href="{% url 'choose_atm' %}">제주도</a></p>
+        <a class="check-btn" href="{% url 'choose_atm' %}"><span
+                class="fas fa-5x fa-circle"></span>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="check-btn" href="{% url 'choose_atm' %}"><span
+                class="fas fa-5x fa-circle"></span>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="check-btn" href="{% url 'choose_atm' %}"><span
+                class="fas fa-5x fa-circle"></span>&nbsp;&nbsp;&nbsp;</a>
+        <p class="region">
+            <span>대전</span>
+            <span>부산</span>
+            <span>제주도</span>
+        </p>
     </div>
 
     <!-- 뒤로가기 버튼 -->

@@ -8,14 +8,15 @@
 
 <h3>PROJECT PERFUME<h3>
 
-### Amazon lightsail을 통해서 배포  
+#### Amazon lightsail을 통해서 배포  
 
 http://52.79.152.220:8000/
 
 
-### 프로젝트 사용법  
+#### 프로젝트 사용법  
 ```python
   1. clone
   2. $ python manage.py makemigrations
   3. $ python manage.py migrates
 ```
+issue관련해서 질문이 있는경우 바로 말씀해주세요!

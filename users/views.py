@@ -86,11 +86,15 @@ def post(request):
         name = request.POST.get('name', None)
         title = request.POST.get('title', None)
         body = request.POST.get('body', None)
-        
-        blog = Blog(image=image, address=address, atm=atm, name=name, title=title, body=body)
+        blog = Blog(
+            image=image,
+            address=address, 
+            atm=atm, 
+            name=name, 
+            title=title, 
+            body=body)
         blog.save()
-
-        return render(request, 'search.html')
+        return redirect('search')
 
 def search(request):
     blogs = Blog.objects.all()

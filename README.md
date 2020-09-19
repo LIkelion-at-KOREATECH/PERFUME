@@ -8,6 +8,6 @@
 
 <h3>PROJECT PERFUME<h3>
 
+Amazon lightsail을 통해서 
 
-
-
+http://52.79.152.220:8000/

@@ -19,4 +19,5 @@ http://52.79.152.220:8000/
   2. $ python manage.py makemigrations
   3. $ python manage.py migrates
 ```
-issue관련해서 질문이 있는경우 바로 말씀해주세요!
+- css설정 때문에 화면 창을 줄이면 레이아웃이 망가질 수 있습니다ㅠ 창 크기를 최대로 해서 사용해주세요
+- issue관련해서 질문이 있는경우 바로 말씀해주세요!

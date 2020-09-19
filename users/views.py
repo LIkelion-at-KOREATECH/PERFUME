@@ -5,6 +5,7 @@ from django.contrib import auth
 from django.contrib.auth import login
 # DB 이용할때, 시간 기능 사용
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -76,8 +77,13 @@ def home(request):
     blogs=Blog.objects #전달받은 객체 (쿼리셋) 
     return render(request, 'home.html', {'blogs':blogs})
 
+# 정우, 빙화: /post 입력했을 경우, 로그인을 안 했을 시  로그인(메인) 페이지로 이동 (사용자가 로그인 했을 경우에만 게시글 생성 할 수 있도록 하기)
+@login_required(login_url="login")
 def post(request):
-    if request.method == "GET":
+    if not request.user.is_authenticated():
+        return redirect('')
+    
+    elif request.method == "GET":
         return render(request, 'post.html')
     elif request.method == "POST":
         image = request.FILES.get('image', None)
@@ -92,6 +98,7 @@ def post(request):
 
         return render(request, 'search.html')
 
+    
 def search(request):
     blogs = Blog.objects.all()
     return render(request, 'search.html', {'blogs' : blogs})

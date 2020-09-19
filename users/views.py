@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import authenticate, logout
 from .models import User , Blog
 from django.contrib import auth
@@ -18,15 +18,19 @@ def signup(request):
         re_password = request.POST.get('re_password', False)
         birth = request.POST.get('birth', False)
         if password != re_password :
-            return render(request, 'signup.html' , {'error' : 'password incorrect!'})
+            return render(request, 'signup.html' , {'pwerror' : 'password incorrect!'})
         else:
-           user = User.objects.create_user(email, password)
-           user.birth = birth
-           user.re_password = re_password
-           user.name = name
-           user.save()
+            try:
+                is_valid = User.objects.get(email=email)
+            except:
+                user = User.objects.create_user(email, password)
+                user.birth = birth
+                user.re_password = re_password
+                user.name = name
+                user.save()
+                return redirect('/')
 
-           return redirect('/')
+            return render(request, 'signup.html', {'emailerror':'중복된 아이디입니다'})
 
     return render(request, 'signup.html')
 

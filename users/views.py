@@ -90,7 +90,7 @@ def post(request):
         blog = Blog(image=image, address=address, atm=atm, name=name, title=title, body=body)
         blog.save()
 
-        return render(request, 'search.html')
+        return redirect('search')
 
 def search(request):
     blogs = Blog.objects.all()
